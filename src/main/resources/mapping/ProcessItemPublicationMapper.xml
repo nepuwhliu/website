@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.website.dao.ProcessItemPublicationMapper" >
+  <resultMap id="BaseResultMap" type="com.example.website.entity.ProcessItemPublication" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="processid" property="processid" jdbcType="INTEGER" />
+    <result column="publicationid" property="publicationid" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, processid, publicationid
+  </sql>
+
+  <select id="getPublicationInformationByProcessId" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from process_itempublication
+    where processid = #{processid,jdbcType=INTEGER}
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from process_itempublication
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from process_itempublication
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.website.entity.ProcessItemPublication" >
+    insert into process_itempublication (id, processid, publicationid
+      )
+    values (#{id,jdbcType=INTEGER}, #{processid,jdbcType=INTEGER}, #{publicationid,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.example.website.entity.ProcessItemPublication" >
+    insert into process_itempublication
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="processid != null" >
+        processid,
+      </if>
+      <if test="publicationid != null" >
+        publicationid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="processid != null" >
+        #{processid,jdbcType=INTEGER},
+      </if>
+      <if test="publicationid != null" >
+        #{publicationid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.website.entity.ProcessItemPublication" >
+    update process_itempublication
+    <set >
+      <if test="processid != null" >
+        processid = #{processid,jdbcType=INTEGER},
+      </if>
+      <if test="publicationid != null" >
+        publicationid = #{publicationid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.example.website.entity.ProcessItemPublication" >
+    update process_itempublication
+    set processid = #{processid,jdbcType=INTEGER},
+      publicationid = #{publicationid,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
