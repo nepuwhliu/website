@@ -6,6 +6,7 @@ import com.example.website.service.front.IResearchCenterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.security.PublicKey;
 import java.util.List;
 
 @Service
@@ -27,6 +28,31 @@ public class ResearchCenterServiceImpl implements IResearchCenterService {
      */
     @Autowired
     private ProcessItemAccumulationMapper processItemAccumulationMapper;
+    /**
+     * 过程与文章发表联系
+     */
+    @Autowired
+    private ProcessItemPublicationMapper processItemPublicationMapper;
+
+    @Autowired
+    private ItemPublicationMapper itemPublicationMapper;
+
+    @Autowired
+    private ItemImageMapper itemImageMapper;
+    @Override
+    public List<ProcessItemPublication> getPublicationInformationByProcessId(Integer processId) {
+        return processItemPublicationMapper.getPublicationInformationByProcessId(processId);
+    }
+
+    @Override
+    public ItemPublicationWithBLOBs getItemPublicationInformationById(Integer id) {
+        return itemPublicationMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public List<ItemImage> getItemImageInformation() {
+        return itemImageMapper.selectByPrimaryKey();
+    }
 
     @Override
     public List<ProcessItemAccumulation> getAccumulationInformationByProcessId(Integer processId) {

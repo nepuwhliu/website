@@ -51,7 +51,7 @@
     <ul>
         <c:forEach items="${researchProcessList}" var="researchProcess">
             <li class="nav-item">
-                <a href="Article.html" target="iframe_T" onload="iframeLoad()"><i class="my-icon nav-icon icon_1"></i><span>${researchProcess.content}</span></a>
+                <a href="/processDetail?processId=${researchProcess.id}" target="iframe_T" onload="iframeLoad()"><i class="my-icon nav-icon icon_1"></i><span>${researchProcess.content}</span></a>
 
             </li>
         </c:forEach>
@@ -59,7 +59,7 @@
 </div>
 
 <div id="body">
-    <iframe src="Article.html" name="iframe_T" id="iframe_T" scrolling="no" onload="iframeLoad()" frameborder="0">
+    <iframe src="/processDetail?processId=4" name="iframe_T" id="iframe_T" scrolling="no" onload="iframeLoad()" frameborder="0">
 
     </iframe>
 </div>

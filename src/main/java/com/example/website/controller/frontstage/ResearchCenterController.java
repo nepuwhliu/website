@@ -74,10 +74,18 @@ public class ResearchCenterController {
         }else if(id == 10) {
             //优选视频
 
+            List<ProcessItemAccumulation> processItemAccumulationList = researchCenterService.getAccumulationInformationByProcessId(3);
+            List<ItemAccumulation> itemAccumulationList = new ArrayList<ItemAccumulation>();
+            for(ProcessItemAccumulation processItemAccumulation : processItemAccumulationList) {
+                itemAccumulationList.add(researchCenterService.getItemAccumulationInformationById(processItemAccumulation.getItemaccumulationid()));
+            }
+            modelAndView.addObject("itemAccumulationList", itemAccumulationList);
             modelAndView.setViewName("front/researchVideo");
         }else if(id == 11) {
             //优选图片
-
+            //TODO 接口写完了 没实现
+            List<ItemImage> imageList = researchCenterService.getItemImageInformation();
+            modelAndView.addObject("imageList", imageList);
             modelAndView.setViewName("front/researchPicture");
         }
         return modelAndView;
@@ -117,24 +125,61 @@ public class ResearchCenterController {
             modelAndView.setViewName("front/itemAccumulation");
         }else if(processId == 4) {
             //发表文章
-            modelAndView.setViewName("");
+            List<ProcessItemPublication> processItemPublicationList = researchCenterService.getPublicationInformationByProcessId(processId);
+            List<ItemPublicationWithBLOBs> itemPublicationWithBLOBsList = new ArrayList<ItemPublicationWithBLOBs>();
+            for(ProcessItemPublication processItemPublication : processItemPublicationList) {
+                itemPublicationWithBLOBsList.add(researchCenterService.getItemPublicationInformationById(processItemPublication.getPublicationid()));
+            }
+            modelAndView.addObject("itemPublicationWithBLOBsList", itemPublicationWithBLOBsList);
+            modelAndView.setViewName("front/itemArticle");
         }else if(processId == 5) {
             // 专利权
-            modelAndView.setViewName("");
+            List<ProcessItemPublication> processItemPublicationList = researchCenterService.getPublicationInformationByProcessId(processId);
+            List<ItemPublicationWithBLOBs> itemPublicationWithBLOBsList = new ArrayList<ItemPublicationWithBLOBs>();
+            for(ProcessItemPublication processItemPublication : processItemPublicationList) {
+                itemPublicationWithBLOBsList.add(researchCenterService.getItemPublicationInformationById(processItemPublication.getPublicationid()));
+            }
+            modelAndView.addObject("itemPublicationWithBLOBsList", itemPublicationWithBLOBsList);
+            modelAndView.setViewName("front/itemCopyright");
         }else if(processId == 6) {
             //软件著作权
-            modelAndView.setViewName("");
+            List<ProcessItemPublication> processItemPublicationList = researchCenterService.getPublicationInformationByProcessId(processId);
+            List<ItemPublicationWithBLOBs> itemPublicationWithBLOBsList = new ArrayList<ItemPublicationWithBLOBs>();
+            for(ProcessItemPublication processItemPublication : processItemPublicationList) {
+                itemPublicationWithBLOBsList.add(researchCenterService.getItemPublicationInformationById(processItemPublication.getPublicationid()));
+            }
+            modelAndView.addObject("itemPublicationWithBLOBsList", itemPublicationWithBLOBsList);
+            modelAndView.setViewName("front/itemCopyright");
         }else if(processId == 7) {
             //断层内部结构
-            modelAndView.setViewName("");
+            List<ProcessItemPublication> processItemPublicationList = researchCenterService.getPublicationInformationByProcessId(processId);
+            List<ItemPublicationWithBLOBs> itemPublicationWithBLOBsList = new ArrayList<ItemPublicationWithBLOBs>();
+            for(ProcessItemPublication processItemPublication : processItemPublicationList) {
+                itemPublicationWithBLOBsList.add(researchCenterService.getItemPublicationInformationById(processItemPublication.getPublicationid()));
+            }
+            modelAndView.addObject("itemPublicationWithBLOBsList", itemPublicationWithBLOBsList);
+            modelAndView.setViewName("front/itemFault");
         }else if(processId == 8) {
             //断层封闭性
-            modelAndView.setViewName("");
+            List<ProcessItemPublication> processItemPublicationList = researchCenterService.getPublicationInformationByProcessId(processId);
+            List<ItemPublicationWithBLOBs> itemPublicationWithBLOBsList = new ArrayList<ItemPublicationWithBLOBs>();
+            for(ProcessItemPublication processItemPublication : processItemPublicationList) {
+                itemPublicationWithBLOBsList.add(researchCenterService.getItemPublicationInformationById(processItemPublication.getPublicationid()));
+            }
+            modelAndView.addObject("itemPublicationWithBLOBsList", itemPublicationWithBLOBsList);
+            modelAndView.setViewName("front/itemFault");
         }else if(processId == 9) {
             //断层稳定性
-            modelAndView.setViewName("");
+            List<ProcessItemPublication> processItemPublicationList = researchCenterService.getPublicationInformationByProcessId(processId);
+            List<ItemPublicationWithBLOBs> itemPublicationWithBLOBsList = new ArrayList<ItemPublicationWithBLOBs>();
+            for(ProcessItemPublication processItemPublication : processItemPublicationList) {
+                itemPublicationWithBLOBsList.add(researchCenterService.getItemPublicationInformationById(processItemPublication.getPublicationid()));
+            }
+            modelAndView.addObject("itemPublicationWithBLOBsList", itemPublicationWithBLOBsList);
+            modelAndView.setViewName("front/itemFault");
         }
         return modelAndView;
     }
+
 
 }

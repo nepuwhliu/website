@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50027
 File Encoding         : 65001
 
-Date: 2020-03-27 15:24:34
+Date: 2020-03-28 19:18:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -105,6 +105,77 @@ INSERT INTO `itemaccumulation` VALUES ('3', 'https://www.runoob.com/try/demo_sou
 INSERT INTO `itemaccumulation` VALUES ('4', 'https://www.runoob.com/try/demo_source/movie.mp4', '2020-03-27 14:52:14', '笑傲江湖', '2020-03-27 14:52:21', '2020-03-27 14:52:23');
 
 -- ----------------------------
+-- Table structure for itemimage
+-- ----------------------------
+DROP TABLE IF EXISTS `itemimage`;
+CREATE TABLE `itemimage` (
+  `id` int(11) NOT NULL auto_increment,
+  `image` text,
+  `createtime` datetime default NULL,
+  `updatetime` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of itemimage
+-- ----------------------------
+INSERT INTO `itemimage` VALUES ('1', 'https://image.so.com/view?src=360pic_strong&z=1&i=0&cmg=b8eb0291b2ba320c452b678ff5a997b8&q=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90&correct=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90&ancestor=list&cmsid=ca4558a1dac80b685ace41b103efbaae&cmras=1&cn=0&gn=0&kn=20&fsn=100&adstar=0&clw=250#id=2f26aeded10fb6faaac8d05991a96c9b&currsn=0&ps=75&pc=75', '2020-03-28 18:41:00', '2020-03-28 18:41:02');
+INSERT INTO `itemimage` VALUES ('2', 'https://image.so.com/view?src=360pic_strong&z=1&i=0&cmg=b8eb0291b2ba320c452b678ff5a997b8&q=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90&correct=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90&ancestor=list&cmsid=ca4558a1dac80b685ace41b103efbaae&cmras=1&cn=0&gn=0&kn=20&fsn=100&adstar=0&clw=250#id=2b7eb2045a7ed36fd5ac95f7cea37f4b&currsn=0&ps=75&pc=75', '2020-03-28 18:41:23', '2020-03-28 18:41:21');
+INSERT INTO `itemimage` VALUES ('3', 'https://image.so.com/view?src=360pic_strong&z=1&i=0&cmg=b8eb0291b2ba320c452b678ff5a997b8&q=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90&correct=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90&ancestor=list&cmsid=ca4558a1dac80b685ace41b103efbaae&cmras=1&cn=0&gn=0&kn=20&fsn=100&adstar=0&clw=250#id=2ee1e1981c9ca92147a844d3f64335be&currsn=0&ps=75&pc=75', '2020-03-28 18:41:30', '2020-03-28 18:41:32');
+INSERT INTO `itemimage` VALUES ('4', 'https://image.so.com/view?src=360pic_strong&z=1&i=0&cmg=b8eb0291b2ba320c452b678ff5a997b8&q=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90&correct=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90&ancestor=list&cmsid=ca4558a1dac80b685ace41b103efbaae&cmras=1&cn=0&gn=0&kn=20&fsn=100&adstar=0&clw=250#id=61d219d29df1db8d8064d9ce3979334b&currsn=0&ps=75&pc=75', '2020-03-28 18:41:39', '2020-03-28 18:41:42');
+INSERT INTO `itemimage` VALUES ('5', 'https://image.so.com/view?src=360pic_strong&z=1&i=0&cmg=b8eb0291b2ba320c452b678ff5a997b8&q=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90&correct=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90&ancestor=list&cmsid=ca4558a1dac80b685ace41b103efbaae&cmras=1&cn=0&gn=0&kn=20&fsn=100&adstar=0&clw=250#id=61d219d29df1db8d8064d9ce3979334b&currsn=0&ps=75&pc=75', '2020-03-28 18:41:51', '2020-03-28 18:41:53');
+INSERT INTO `itemimage` VALUES ('6', 'https://image.so.com/view?src=360pic_strong&z=1&i=0&cmg=b8eb0291b2ba320c452b678ff5a997b8&q=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90&correct=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90&ancestor=list&cmsid=ca4558a1dac80b685ace41b103efbaae&cmras=1&cn=0&gn=0&kn=20&fsn=100&adstar=0&clw=250#id=9a585e2b9d670f3c774027688b0fd593&currsn=0&ps=75&pc=75', '2020-03-28 18:41:59', '2020-03-28 18:42:01');
+INSERT INTO `itemimage` VALUES ('7', 'https://image.so.com/view?src=360pic_strong&z=1&i=0&cmg=b8eb0291b2ba320c452b678ff5a997b8&q=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90&correct=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90&ancestor=list&cmsid=ca4558a1dac80b685ace41b103efbaae&cmras=1&cn=0&gn=0&kn=20&fsn=100&adstar=0&clw=250#id=9a585e2b9d670f3c774027688b0fd593&currsn=0&ps=75&pc=75', '2020-03-28 18:42:06', '2020-03-28 18:42:09');
+INSERT INTO `itemimage` VALUES ('8', 'https://image.so.com/view?src=360pic_strong&z=1&i=0&cmg=b8eb0291b2ba320c452b678ff5a997b8&q=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90&correct=%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90&ancestor=list&cmsid=ca4558a1dac80b685ace41b103efbaae&cmras=1&cn=0&gn=0&kn=20&fsn=100&adstar=0&clw=250#id=3fee9fefe92edf191033090b68b0ca6d&currsn=0&ps=75&pc=75', '2020-03-28 18:42:14', '2020-03-28 18:42:16');
+
+-- ----------------------------
+-- Table structure for itempublication
+-- ----------------------------
+DROP TABLE IF EXISTS `itempublication`;
+CREATE TABLE `itempublication` (
+  `id` int(11) NOT NULL auto_increment,
+  `itemname` varchar(255) default NULL,
+  `title` text,
+  `author` text,
+  `source` text,
+  `submittime` datetime default NULL,
+  `link` varchar(255) default NULL,
+  `createtime` datetime default NULL,
+  `updatetime` datetime default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of itempublication
+-- ----------------------------
+INSERT INTO `itempublication` VALUES ('1', '文章发表', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Company', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('2', '文章发表', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Company', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('3', '文章发表', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Company', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('4', '文章发表', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Company', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('5', '专利权', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Company', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('6', '专利权', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Company', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('7', '专利权', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Company', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('8', '专利权', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Company', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('9', '专利权', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Company', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('10', '软件著作权', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Company', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('11', '软件著作权', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Company', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('12', '软件著作权', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Company', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('13', '软件著作权', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Company', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('14', '软件著作权', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Companyc', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('15', '断层稳定性', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Companyc', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('16', '断层稳定性', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Companyc', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('17', '断层稳定性', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Companyc', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('18', '断层稳定性', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Companyc', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('19', '断层封闭性', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Companyc', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('20', '断层封闭性', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Companyc', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('21', '断层封闭性', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Companyc', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('22', '断层封闭性', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Companyc', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('23', '断层稳定性', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Companyc', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('24', '断层稳定性', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Companyc', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('25', '断层稳定性', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Companyc', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+INSERT INTO `itempublication` VALUES ('26', '断层稳定性', 'Learning seismic image enhancement from pairs of 3D partial and full image volumes', 'Enning Wang and Jeff Nealon, Chevron Energy Technology Companyc', '东北石油大学', '2020-03-28 11:51:09', null, '2020-03-28 11:51:09', '2020-03-28 11:51:09');
+
+-- ----------------------------
 -- Table structure for itemresearch
 -- ----------------------------
 DROP TABLE IF EXISTS `itemresearch`;
@@ -188,6 +259,47 @@ INSERT INTO `process_itemaccumulation` VALUES ('1', '3', '1', '2020-03-27 14:53:
 INSERT INTO `process_itemaccumulation` VALUES ('2', '3', '2', '2020-03-27 14:53:19', '2020-03-27 14:53:27');
 INSERT INTO `process_itemaccumulation` VALUES ('3', '3', '3', '2020-03-27 14:53:22', '2020-03-27 14:53:30');
 INSERT INTO `process_itemaccumulation` VALUES ('4', '3', '4', '2020-03-27 14:53:25', '2020-03-27 14:53:32');
+
+-- ----------------------------
+-- Table structure for process_itempublication
+-- ----------------------------
+DROP TABLE IF EXISTS `process_itempublication`;
+CREATE TABLE `process_itempublication` (
+  `id` int(11) NOT NULL auto_increment,
+  `processid` int(11) default NULL,
+  `publicationid` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of process_itempublication
+-- ----------------------------
+INSERT INTO `process_itempublication` VALUES ('1', '4', '1');
+INSERT INTO `process_itempublication` VALUES ('2', '4', '2');
+INSERT INTO `process_itempublication` VALUES ('3', '4', '3');
+INSERT INTO `process_itempublication` VALUES ('4', '4', '4');
+INSERT INTO `process_itempublication` VALUES ('5', '5', '5');
+INSERT INTO `process_itempublication` VALUES ('6', '5', '6');
+INSERT INTO `process_itempublication` VALUES ('7', '5', '7');
+INSERT INTO `process_itempublication` VALUES ('8', '5', '8');
+INSERT INTO `process_itempublication` VALUES ('9', '5', '9');
+INSERT INTO `process_itempublication` VALUES ('10', '6', '10');
+INSERT INTO `process_itempublication` VALUES ('11', '6', '11');
+INSERT INTO `process_itempublication` VALUES ('12', '6', '12');
+INSERT INTO `process_itempublication` VALUES ('13', '6', '13');
+INSERT INTO `process_itempublication` VALUES ('14', '6', '14');
+INSERT INTO `process_itempublication` VALUES ('15', '7', '15');
+INSERT INTO `process_itempublication` VALUES ('16', '7', '16');
+INSERT INTO `process_itempublication` VALUES ('17', '7', '17');
+INSERT INTO `process_itempublication` VALUES ('18', '7', '18');
+INSERT INTO `process_itempublication` VALUES ('19', '8', '19');
+INSERT INTO `process_itempublication` VALUES ('20', '8', '20');
+INSERT INTO `process_itempublication` VALUES ('21', '8', '21');
+INSERT INTO `process_itempublication` VALUES ('22', '8', '22');
+INSERT INTO `process_itempublication` VALUES ('23', '9', '23');
+INSERT INTO `process_itempublication` VALUES ('24', '9', '24');
+INSERT INTO `process_itempublication` VALUES ('25', '9', '25');
+INSERT INTO `process_itempublication` VALUES ('26', '9', '26');
 
 -- ----------------------------
 -- Table structure for process_itemresearch

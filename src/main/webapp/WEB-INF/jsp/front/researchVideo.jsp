@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -34,70 +35,18 @@
     <div class="blackbg"></div>
     <div class="wrap2 wrap bg-gray owrap">
         <div class="main" id="main">
-            <div class="box">
-                <a href="">
+            <c:forEach items="${itemAccumulationList}" var="itemAccumulation">
+                <div class="box">
+                    <a href="">
                     <span class="img">
-                            <img class="bg-pic" src="img/video.jpg" alt="">
+                            <video width="320" height="240" controls autoplay>
+                              <source src="${itemAccumulation.video}" type="video/mp4">
+                            </video>
                         </span>
-                    <span class="word">时间+主题</span>
-                </a>
-            </div>
-            <div class="box">
-                <a href="">
-                    <span class="img">
-                            <img class="bg-pic" src="img/video.jpg" alt="">
-                        </span>
-                    <span class="word">时间+主题</span>
-                </a>
-            </div>
-            <div class="box">
-                <a href="">
-                    <span class="img">
-                            <img class="bg-pic" src="img/video.jpg" alt="">
-                        </span>
-                    <span class="word">时间+主题</span>
-                </a>
-            </div>
-            <div class="box">
-                <a href="">
-                    <span class="img">
-                            <img class="bg-pic" src="img/video.jpg" alt="">
-                        </span>
-                    <span class="word">时间+主题</span>
-                </a>
-            </div>
-            <div class="box">
-                <a href="">
-                    <span class="img">
-                            <img class="bg-pic" src="img/video.jpg" alt="">
-                        </span>
-                    <span class="word">时间+主题</span>
-                </a>
-            </div>
-            <div class="box">
-                <a href="">
-                    <span class="img">
-                            <img class="bg-pic" src="img/video.jpg" alt="">
-                        </span>
-                    <span class="word">时间+主题</span>
-                </a>
-            </div>
-            <div class="box">
-                <a href="">
-                    <span class="img">
-                            <img class="bg-pic" src="img/video.jpg" alt="">
-                        </span>
-                    <span class="word">时间+主题</span>
-                </a>
-            </div>
-            <div class="box">
-                <a href="">
-                    <span class="img">
-                            <img class="bg-pic" src="img/video.jpg" alt="">
-                        </span>
-                    <span class="word">时间+主题</span>
-                </a>
-            </div>
+                        <span class="word">${itemAccumulation.inserttime}+${itemAccumulation.theme}</span>
+                    </a>
+                </div>
+            </c:forEach>
         </div>
     </div>
 </div>
